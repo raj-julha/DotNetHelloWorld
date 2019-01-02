@@ -1,0 +1,1304 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20190102170044
+Username: xxx
+RunAs User: xxx
+Configuration Name: 
+Machine: XXX (Microsoft Windows NT 10.0.17134.0)
+Host Application: PowerShell.exe -noexit -command Set-Location 'E:\projects\mygithub\DotNetHello'
+Process ID: 1460
+PSVersion: 5.1.17134.407
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17134.407
+BuildVersion: 10.0.17134.407
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is ..\..\dotnethello.txt
+PS E:\projects\mygithub\DotNetHello> dotnet new sln
+
+Welcome to .NET Core!
+---------------------
+Learn more about .NET Core: https://aka.ms/dotnet-docs
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
+
+Telemetry
+---------
+The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous and doesn't in
+clude command-line arguments. The data is collected by Microsoft and shared with the community. You can opt-out of telem
+etry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+
+Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
+
+ASP.NET Core
+------------
+Successfully installed the ASP.NET Core HTTPS Development Certificate.
+To trust the certificate run 'dotnet dev-certs https --trust' (Windows and macOS only). For establishing trust on other
+platforms refer to the platform specific documentation.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+Getting ready...
+The template "Solution File" was created successfully.
+PS E:\projects\mygithub\DotNetHello> dotnet new webapi HelloWorld
+Usage: new [options]
+
+Options:
+  -h, --help          Displays help for this command.
+  -l, --list          Lists templates containing the specified name. If no name is specified, lists all templates.
+  -n, --name          The name for the output being created. If no name is specified, the name of the current directory
+is used.
+  -o, --output        Location to place the generated output.
+  -i, --install       Installs a source or a template pack.
+  -u, --uninstall     Uninstalls a source or a template pack.
+  --nuget-source      Specifies a NuGet source to use during install.
+  --type              Filters templates based on available types. Predefined values are "project", "item" or "other".
+  --dry-run           Displays a summary of what would happen if the given command line were run if it would result in a
+ template creation.
+  --force             Forces content to be generated even if it would change existing files.
+  -lang, --language   Filters templates based on language and specifies the language of the template to create.
+
+
+Invalid input switch:
+  HelloWorld
+ASP.NET Core Web API (C#)
+Author: Microsoft
+Description: A project template for creating an ASP.NET Core application with an example Controller for a RESTful HTTP s
+ervice. This template can also be used for ASP.NET Core MVC Views and Controllers.
+Options:
+
+  -au|--auth                 The type of authentication to use
+
+                                 None             - No authentication
+
+                                 IndividualB2C    - Individual authentication with Azure AD B2C
+
+                                 SingleOrg        - Organizational authentication for a single tenant
+
+                                 Windows          - Windows authentication
+
+                             Default: None
+
+
+  --aad-b2c-instance         The Azure Active Directory B2C instance to connect to (use with IndividualB2C auth).
+
+                             string - Optional
+
+                             Default: https://login.microsoftonline.com/tfp/
+
+
+  -ssp|--susi-policy-id      The sign-in and sign-up policy ID for this project (use with IndividualB2C auth).
+
+                             string - Optional
+
+
+  --aad-instance             The Azure Active Directory instance to connect to (use with SingleOrg auth).
+
+                             string - Optional
+
+                             Default: https://login.microsoftonline.com/
+
+
+  --client-id                The Client ID for this project (use with SingleOrg or IndividualB2C auth).
+
+                             string - Optional
+
+                             Default: 11111111-1111-1111-11111111111111111
+
+
+  --domain                   The domain for the directory tenant (use with SingleOrg or IndividualB2C auth).
+
+                             string - Optional
+
+                             Default: qualified.domain.name
+
+
+  --tenant-id                The TenantId ID of the directory to connect to (use with SingleOrg auth).
+
+                             string - Optional
+
+                             Default: 22222222-2222-2222-2222-222222222222
+
+
+  -r|--org-read-access       Whether or not to allow this application read access to the directory (only applies to Sing
+leOrg auth).
+                             bool - Optional
+
+                             Default: false / (*) true
+
+
+  --exclude-launch-settings  Whether to exclude launchSettings.json in the generated template.
+
+                             bool - Optional
+
+                             Default: false / (*) true
+
+
+  --no-https                 Whether to turn off HTTPS. This option only applies if IndividualAuth or OrganizationalAuth
+ are not being used.
+                             bool - Optional
+
+                             Default: false / (*) true
+
+
+  -uld|--use-local-db        Whether to use LocalDB instead of SQLite. This option only applies if --auth Individual or
+--auth IndividualB2C is specified.
+                             bool - Optional
+
+                             Default: false / (*) true
+
+
+  --no-restore               If specified, skips the automatic restore of the project on create.
+
+                             bool - Optional
+
+                             Default: false / (*) true
+
+
+
+* Indicates the value used if the switch is provided without a value.
+PS E:\projects\mygithub\DotNetHello> dotnet new webapi --output HelloWorld
+The template "ASP.NET Core Web API" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on HelloWorld\HelloWorld.csproj...
+  Restoring packages for E:\projects\mygithub\DotNetHello\HelloWorld\HelloWorld.csproj...
+  Generating MSBuild file E:\projects\mygithub\DotNetHello\HelloWorld\obj\HelloWorld.csproj.nuget.g.props.
+  Generating MSBuild file E:\projects\mygithub\DotNetHello\HelloWorld\obj\HelloWorld.csproj.nuget.g.targets.
+  Restore completed in 23.1 sec for E:\projects\mygithub\DotNetHello\HelloWorld\HelloWorld.csproj.
+
+Restore succeeded.
+PS E:\projects\mygithub\DotNetHello> git init
+Initialized empty Git repository in E:/projects/mygithub/DotNetHello/.git/
+PS E:\projects\mygithub\DotNetHello> git add .
+
+PS E:\projects\mygithub\DotNetHello> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   DotNetHello.sln
+        new file:   HelloWorld/Controllers/ValuesController.cs
+        new file:   HelloWorld/HelloWorld.csproj
+        new file:   HelloWorld/Program.cs
+        new file:   HelloWorld/Properties/launchSettings.json
+        new file:   HelloWorld/Startup.cs
+        new file:   HelloWorld/appsettings.Development.json
+        new file:   HelloWorld/appsettings.json
+        new file:   HelloWorld/obj/HelloWorld.csproj.nuget.cache
+        new file:   HelloWorld/obj/HelloWorld.csproj.nuget.g.props
+        new file:   HelloWorld/obj/HelloWorld.csproj.nuget.g.targets
+        new file:   HelloWorld/obj/project.assets.json
+PS E:\projects\mygithub\DotNetHello> dotnet sln DotNetHello.sln add HelloWorld/HelloWorld.csproj
+Project `HelloWorld\HelloWorld.csproj` added to the solution.
+PS E:\projects\mygithub\DotNetHello> dotnet new xunit --output HelloWorld.Tests
+The template "xUnit Test Project" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on HelloWorld.Tests\HelloWorld.Tests.csproj...
+  Restoring packages for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.cs
+proj...
+  Installing System.Threading.ThreadPool 4.0.10.
+  Installing Microsoft.Win32.Registry 4.0.0.
+  Installing System.Xml.XPath 4.0.1.
+  Installing System.Collections.Immutable 1.2.0.
+  Installing System.ComponentModel.Primitives 4.1.0.
+  Installing xunit.runner.visualstudio 2.4.0.
+  Installing System.ComponentModel 4.0.1.
+  Installing xunit 2.4.0.
+  Installing Microsoft.NET.Test.Sdk 15.9.0.
+  Installing System.Collections.Specialized 4.0.1.
+  Installing xunit.assert 2.4.0.
+  Installing System.Collections.NonGeneric 4.0.1.
+  Installing xunit.analyzers 0.10.0.
+  Installing xunit.core 2.4.0.
+  Installing Microsoft.CodeCoverage 15.9.0.
+  Installing System.Threading.Thread 4.0.0.
+  Installing Microsoft.TestPlatform.TestHost 15.9.0.
+  Installing xunit.extensibility.execution 2.4.0.
+  Installing System.Diagnostics.TraceSource 4.0.0.
+  Installing System.Diagnostics.TextWriterTraceListener 4.0.0.
+  Installing xunit.extensibility.core 2.4.0.
+  Installing System.Diagnostics.Process 4.1.0.
+  Installing Microsoft.Extensions.DependencyModel 1.0.3.
+  Installing System.Xml.XPath.XmlDocument 4.0.1.
+  Installing Microsoft.TestPlatform.ObjectModel 15.9.0.
+  Installing System.Runtime.Loader 4.0.0.
+  Installing System.Reflection.Metadata 1.3.0.
+  Installing xunit.abstractions 2.0.2.
+  Installing Microsoft.DotNet.PlatformAbstractions 1.0.3.
+  Installing System.ComponentModel.EventBasedAsync 4.0.11.
+  Installing System.ComponentModel.TypeConverter 4.1.0.
+  Generating MSBuild file E:\projects\mygithub\DotNetHello\HelloWorld.Tests\obj\HelloWorld.Tests.csproj.nuget.g.props.
+  Generating MSBuild file E:\projects\mygithub\DotNetHello\HelloWorld.Tests\obj\HelloWorld.Tests.csproj.nuget.g.targets.
+  Restore completed in 25.64 sec for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj.
+
+Restore succeeded.
+PS E:\projects\mygithub\DotNetHello> dotnet sln DotNetHello.sln add HelloWorld.Tests/HelloWorld.Tests.csproj
+Project `HelloWorld.Tests\HelloWorld.Tests.csproj` added to the solution.
+PS E:\projects\mygithub\DotNetHello> dotnet add HelloWorld.Tests/HelloWorld.Tests.csproj reference HelloWorld/HelloWorld.csproj
+Reference `..\HelloWorld\HelloWorld.csproj` added to the project.
+PS E:\projects\mygithub\DotNetHello> dotnet add HelloWorld.Tests/HelloWorld.Tests.csproj package Shouldly
+  Writing C:\Users\rajoo\AppData\Local\Temp\tmpD363.tmp
+info : Adding PackageReference for package 'Shouldly' into project 'HelloWorld.Tests/HelloWorld.Tests.csproj'.
+log  : Restoring packages for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj...
+info :   GET https://api.nuget.org/v3-flatcontainer/shouldly/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/shouldly/index.json 2095ms
+info :   GET https://api.nuget.org/v3-flatcontainer/shouldly/3.0.2/shouldly.3.0.2.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/shouldly/3.0.2/shouldly.3.0.2.nupkg 1249ms
+log  : Installing Shouldly 3.0.2.
+info : Package 'Shouldly' is compatible with all the specified frameworks in project 'HelloWorld.Tests/HelloWorld.Tests.csproj'.
+info : PackageReference for package 'Shouldly' version '3.0.2' added to file 'E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj'.
+info : Committing restore...
+info : Writing lock file to disk. Path: E:\projects\mygithub\DotNetHello\HelloWorld.Tests\obj\project.assets.json
+log  : Restore completed in 5.89 sec for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj.
+PS E:\projects\mygithub\DotNetHello> dotnet add HelloWorld.Tests/HelloWorld.Tests.csproj package Alba.AspNetCore2
+  Writing C:\Users\rajoo\AppData\Local\Temp\tmpE86D.tmp
+info : Adding PackageReference for package 'Alba.AspNetCore2' into project 'HelloWorld.Tests/HelloWorld.Tests.csproj'.
+log  : Restoring packages for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj...
+info :   GET https://api.nuget.org/v3-flatcontainer/alba.aspnetcore2/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/alba.aspnetcore2/index.json 2198ms
+info :   GET https://api.nuget.org/v3-flatcontainer/alba.aspnetcore2/1.4.3/alba.aspnetcore2.1.4.3.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/alba.aspnetcore2/1.4.3/alba.aspnetcore2.1.4.3.nupkg 1255ms
+info :   GET https://api.nuget.org/v3-flatcontainer/baseline/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.abstractions/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.core/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.webutilities/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/baseline/index.json 1258ms
+info :   GET https://api.nuget.org/v3-flatcontainer/baseline/1.4.0/baseline.1.4.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication/index.json 1856ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting/index.json 1809ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting/2.0.0/microsoft.aspnetcore.hosting.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication/2.0.0/microsoft.aspnetcore.authentication.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http/index.json 1873ms
+
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http/2.0.0/microsoft.aspnetcore.http.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.abstractions/index.json 1956ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.abstractions/2.0.0/microsoft.aspnetcore.http.abstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/baseline/1.4.0/baseline.1.4.0.nupkg 1256ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.core/index.json 1909ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.core/2.0.0/microsoft.aspnetcore.mvc.core.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.webutilities/index.json 1971ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.webutilities/2.0.0/microsoft.aspnetcore.webutilities.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting/2.0.0/microsoft.aspnetcore.hosting.2.0.0.nupkg 1214ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication/2.0.0/microsoft.aspnetcore.authentication.2.0.0.nupkg 1224ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http/2.0.0/microsoft.aspnetcore.http.2.0.0.nupkg 1229ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication.core/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.abstractions/2.0.0/microsoft.aspnetcore.http.abstractions.2.0.0.nupkg 1235ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.core/2.0.0/microsoft.aspnetcore.mvc.core.2.0.0.nupkg 1239ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.dataprotection/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.net.http.headers/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.webutilities/2.0.0/microsoft.aspnetcore.webutilities.2.0.0.nupkg 1253ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting.server.abstractions/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.objectpool/index.json
+
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.features/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.extensions/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/system.text.encodings.web/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.options/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.environmentvariables/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.webencoders/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.fileextensions/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.fileproviders.physical/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication.core/index.json 1226ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication.core/2.0.0/microsoft.aspnetcore.authentication.core.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.abstractions/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authorization.policy/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting.abstractions/index.json 1228ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting.abstractions/2.0.0/microsoft.aspnetcore.hosting.abstractions.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/system.diagnostics.diagnosticsource/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/system.reflection.metadata/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.responsecaching.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.dataprotection/index.json 1201ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.dataprotection/2.0.0/microsoft.aspnetcore.dataprotection.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.routing/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencymodel/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.net.http.headers/index.json 1240ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting.server.abstractions/index.json 1253ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.net.http.headers/2.0.0/microsoft.net.http.headers.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting.server.abstractions/2.0.0/microsoft.aspnetcore.hosting.server.abstractions.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.fileproviders.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.extensions/index.json 1115ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.features/index.json 1346ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.extensions/2.0.0/microsoft.aspnetcore.http.extensions.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.features/2.0.0/microsoft.aspnetcore.http.features.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.options/index.json 1243ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.options/2.0.0/microsoft.extensions.options.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/index.json 1200ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/2.0.0/microsoft.extensions.logging.abstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication.core/2.0.0/microsoft.aspnetcore.authentication.core.2.0.0.nupkg 1218ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.objectpool/index.json1947ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging/index.json 1227ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.objectpool/2.0.0/microsoft.extensions.objectpool.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging/2.0.0/microsoft.extensions.logging.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/system.text.encodings.web/index.json 1954ms
+
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting.abstractions/2.0.0/microsoft.aspnetcore.hosting.abstractions.2.0.0.nupkg 1221ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration/index.json 1862ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.text.encodings.web/4.4.0/system.text.encodings.web.4.4.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration/2.0.0/microsoft.extensions.configuration.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.hosting.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.dataprotection/2.0.0/microsoft.aspnetcore.dataprotection.2.0.0.nupkg 1203ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.environmentvariables/index.json 1868ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.environmentvariables/2.0.0/microsoft.extensions.configuration.environmentvariables.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.webencoders/index.json 1966ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.webencoders/2.0.0/microsoft.extensions.webencoders.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.fileextensions/index.json 1971ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.hosting.server.abstractions/2.0.0/microsoft.aspnetcore.hosting.server.abstractions.2.0.0.nupkg 1247ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.net.http.headers/2.0.0/microsoft.net.http.headers.2.0.0.nupkg 1253ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.fileextensions/2.0.0/microsoft.extensions.configuration.fileextensions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection/index.json 1971ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection/2.0.0/microsoft.extensions.dependencyinjection.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.fileproviders.physical/index.json 1962ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.fileproviders.physical/2.0.0/microsoft.extensions.fileproviders.physical.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.primitives/index.json
+
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.features/2.0.0/microsoft.aspnetcore.http.features.2.0.0.nupkg 1219ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.cryptography.internal/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.http.extensions/2.0.0/microsoft.aspnetcore.http.extensions.2.0.0.nupkg 1252ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.abstractions/index.json 1874ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.options/2.0.0/microsoft.extensions.options.2.0.0.nupkg 1249ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.abstractions/2.0.0/microsoft.aspnetcore.mvc.abstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/2.0.0/microsoft.extensions.logging.abstractions.2.0.0.nupkg 1248ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authorization.policy/index.json 1959ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.buffers/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.responsecaching.abstractions/index.json 1871ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.reflection.metadata/index.json 1906ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authorization.policy/2.0.0/microsoft.aspnetcore.authorization.policy.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.responsecaching.abstractions/2.0.0/microsoft.aspnetcore.responsecaching.abstractions.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/system.reflection.metadata/1.5.0/system.reflection.metadata.1.5.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/system.diagnostics.diagnosticsource/index.json 1959ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.diagnostics.diagnosticsource/4.4.1/system.diagnostics.diagnosticsource.4.4.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.dataprotection.abstractions/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.win32.registry/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/system.security.cryptography.xml/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencymodel/index.json 1963ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.routing/index.json 1969ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication.abstractions/index.json 1217ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencymodel/2.0.0/microsoft.extensions.dependencymodel.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.routing/2.0.0/microsoft.aspnetcore.routing.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication.abstractions/2.0.0/microsoft.aspnetcore.authentication.abstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.fileproviders.abstractions/index.json 1965ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.fileproviders.abstractions/2.0.0/microsoft.extensions.fileproviders.abstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging/2.0.0/microsoft.extensions.logging.2.0.0.nupkg 1208ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.objectpool/2.0.0/microsoft.extensions.objectpool.2.0.0.nupkg 1234ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.text.encodings.web/4.4.0/system.text.encodings.web.4.4.0.nupkg 1216ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration/2.0.0/microsoft.extensions.configuration.2.0.0.nupkg 1227ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.hosting.abstractions/index.json 1248ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.hosting.abstractions/2.0.0/microsoft.extensions.hosting.abstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.environmentvariables/2.0.0/microsoft.extensions.configuration.environmentvariables.2.0.0.nupkg 1226ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.routing/2.0.0/microsoft.aspnetcore.routing.2.0.0.nupkg 494ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.webencoders/2.0.0/microsoft.extensions.webencoders.2.0.0.nupkg 1207ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.fileextensions/2.0.0/microsoft.extensions.configuration.fileextensions.2.0.0.nupkg 1244ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection/2.0.0/microsoft.extensions.dependencyinjection.2.0.0.nupkg 1246ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.fileproviders.physical/2.0.0/microsoft.extensions.fileproviders.physical.2.0.0.nupkg 1249ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.primitives/index.json1249ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.primitives/2.0.0/microsoft.extensions.primitives.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.cryptography.internal/index.json 1220ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.cryptography.internal/2.0.0/microsoft.aspnetcore.cryptography.internal.2.0.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.routing.abstractions/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.filesystemglobbing/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.abstractions/2.0.0/microsoft.aspnetcore.mvc.abstractions.2.0.0.nupkg 1222ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.buffers/index.json 1249ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.buffers/4.4.0/system.buffers.4.4.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authorization.policy/2.0.0/microsoft.aspnetcore.authorization.policy.2.0.0.nupkg 1229ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.responsecaching.abstractions/2.0.0/microsoft.aspnetcore.responsecaching.abstractions.2.0.0.nupkg 1230ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.abstractions/index.json 1867ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.reflection.metadata/1.5.0/system.reflection.metadata.1.5.0.nupkg 1245ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.diagnostics.diagnosticsource/4.4.1/system.diagnostics.diagnosticsource.4.4.1.nupkg 1240ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.abstractions/2.0.0/microsoft.extensions.configuration.abstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/index.json 1870ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/2.0.0/microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/system.security.cryptography.xml/index.json 1244ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.dataprotection.abstractions/index.json 1250ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.security.cryptography.xml/4.4.0/system.security.cryptography.xml.4.4.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.dataprotection.abstractions/2.0.0/microsoft.aspnetcore.dataprotection.abstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.win32.registry/index.json 1255ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.win32.registry/4.4.0/microsoft.win32.registry.4.4.0.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authorization/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencymodel/2.0.0/microsoft.extensions.dependencymodel.2.0.0.nupkg 1247ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authentication.abstractions/2.0.0/microsoft.aspnetcore.authentication.abstractions.2.0.0.nupkg 1242ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.fileproviders.abstractions/2.0.0/microsoft.extensions.fileproviders.abstractions.2.0.0.nupkg 1241ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.dotnet.platformabstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.hosting.abstractions/2.0.0/microsoft.extensions.hosting.abstractions.2.0.0.nupkg 1245ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.primitives/2.0.0/microsoft.extensions.primitives.2.0.0.nupkg 1248ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.cryptography.internal/2.0.0/microsoft.aspnetcore.cryptography.internal.2.0.0.nupkg 1228ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.runtime.compilerservices.unsafe/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.routing.abstractions/index.json 1242ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.routing.abstractions/2.0.0/microsoft.aspnetcore.routing.abstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.filesystemglobbing/index.json 1255ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.filesystemglobbing/2.0.0/microsoft.extensions.filesystemglobbing.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/system.buffers/4.4.0/system.buffers.4.4.0.nupkg 1251ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.abstractions/2.0.0/microsoft.extensions.configuration.abstractions.2.0.0.nupkg 1222ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.security.cryptography.xml/4.4.0/system.security.cryptography.xml.4.4.0.nupkg 1251ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.dataprotection.abstractions/2.0.0/microsoft.aspnetcore.dataprotection.abstractions.2.0.0.nupkg 1254ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.win32.registry/4.4.0/microsoft.win32.registry.4.4.0.nupkg 1255ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authorization/index.json 1220ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authorization/2.0.0/microsoft.aspnetcore.authorization.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.dotnet.platformabstractions/index.json 1217ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.dotnet.platformabstractions/2.0.0/microsoft.dotnet.platformabstractions.2.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/2.0.0/microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg 2050ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.runtime.compilerservices.unsafe/index.json 1217ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.runtime.compilerservices.unsafe/4.4.0/system.runtime.compilerservices.unsafe.4.4.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.routing.abstractions/2.0.0/microsoft.aspnetcore.routing.abstractions.2.0.0.nupkg 1241ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.filesystemglobbing/2.0.0/microsoft.extensions.filesystemglobbing.2.0.0.nupkg 1253ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.authorization/2.0.0/microsoft.aspnetcore.authorization.2.0.0.nupkg 1221ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.security.accesscontrol/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.dotnet.platformabstractions/2.0.0/microsoft.dotnet.platformabstractions.2.0.0.nupkg 1224ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.security.principal.windows/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/system.runtime.compilerservices.unsafe/4.4.0/system.runtime.compilerservices.unsafe.4.4.0.nupkg 1215ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.security.accesscontrol/index.json 1254ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.security.accesscontrol/4.4.0/system.security.accesscontrol.4.4.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/system.security.principal.windows/index.json 1224ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.security.principal.windows/4.4.0/system.security.principal.windows.4.4.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/system.security.principal.windows/4.4.0/system.security.principal.windows.4.4.0.nupkg 1224ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.security.accesscontrol/4.4.0/system.security.accesscontrol.4.4.0.nupkg 1253ms
+log  : Installing System.Security.AccessControl 4.4.0.
+log  : Installing System.Security.Principal.Windows 4.4.0.
+log  : Installing System.Runtime.CompilerServices.Unsafe 4.4.0.
+log  : Installing Microsoft.Win32.Registry 4.4.0.
+log  : Installing System.Security.Cryptography.Xml 4.4.0.
+log  : Installing Microsoft.AspNetCore.DataProtection.Abstractions 2.0.0.
+log  : Installing Microsoft.AspNetCore.Cryptography.Internal 2.0.0.
+log  : Installing Microsoft.AspNetCore.Authorization 2.0.0.
+log  : Installing Microsoft.AspNetCore.Authentication.Abstractions 2.0.0.
+log  : Installing Microsoft.AspNetCore.Routing.Abstractions 2.0.0.
+log  : Installing Microsoft.DotNet.PlatformAbstractions 2.0.0.
+log  : Installing Microsoft.Extensions.Configuration.Abstractions 2.0.0.
+log  : Installing Microsoft.Extensions.Hosting.Abstractions 2.0.0.
+log  : Installing Microsoft.Extensions.FileSystemGlobbing 2.0.0.
+log  : Installing Microsoft.Extensions.DependencyInjection.Abstractions 2.0.0.
+log  : Installing System.Buffers 4.4.0.
+log  : Installing Alba.AspNetCore2 1.4.3.
+log  : Installing Microsoft.Extensions.Primitives 2.0.0.
+log  : Installing Baseline 1.4.0.
+log  : Installing Microsoft.AspNetCore.Http.Abstractions 2.0.0.
+log  : Installing Microsoft.AspNetCore.DataProtection 2.0.0.
+log  : Installing Microsoft.AspNetCore.Http 2.0.0.
+log  : Installing Microsoft.AspNetCore.WebUtilities 2.0.0.
+log  : Installing Microsoft.AspNetCore.Hosting 2.0.0.
+log  : Installing Microsoft.Extensions.WebEncoders 2.0.0.
+log  : Installing Microsoft.AspNetCore.Mvc.Core 2.0.0.
+log  : Installing Microsoft.AspNetCore.Authentication 2.0.0.
+log  : Installing Microsoft.AspNetCore.Authorization.Policy 2.0.0.
+log  : Installing System.Text.Encodings.Web 4.4.0.
+log  : Installing Microsoft.AspNetCore.Http.Features 2.0.0.
+log  : Installing Microsoft.Extensions.ObjectPool 2.0.0.
+log  : Installing Microsoft.Extensions.FileProviders.Abstractions 2.0.0.
+log  : Installing Microsoft.Net.Http.Headers 2.0.0.
+log  : Installing Microsoft.Extensions.Options 2.0.0.
+log  : Installing Microsoft.Extensions.Configuration.EnvironmentVariables 2.0.0.
+log  : Installing Microsoft.Extensions.Configuration.FileExtensions 2.0.0.
+log  : Installing Microsoft.AspNetCore.Authentication.Core 2.0.0.
+log  : Installing System.Diagnostics.DiagnosticSource 4.4.1.
+log  : Installing Microsoft.AspNetCore.Mvc.Abstractions 2.0.0.
+log  : Installing System.Reflection.Metadata 1.5.0.
+log  : Installing Microsoft.Extensions.Logging 2.0.0.
+log  : Installing Microsoft.AspNetCore.ResponseCaching.Abstractions 2.0.0.
+log  : Installing Microsoft.Extensions.DependencyInjection 2.0.0.
+log  : Installing Microsoft.AspNetCore.Http.Extensions 2.0.0.
+log  : Installing Microsoft.AspNetCore.Routing 2.0.0.
+log  : Installing Microsoft.Extensions.FileProviders.Physical 2.0.0.
+log  : Installing Microsoft.AspNetCore.Hosting.Server.Abstractions 2.0.0.
+log  : Installing Microsoft.AspNetCore.Hosting.Abstractions 2.0.0.
+log  : Installing Microsoft.Extensions.DependencyModel 2.0.0.
+log  : Installing Microsoft.Extensions.Configuration 2.0.0.
+log  : Installing Microsoft.Extensions.Logging.Abstractions 2.0.0.
+info : Package 'Alba.AspNetCore2' is compatible with all the specified frameworks in project '
+HelloWorld.Tests/HelloWorld.Tests.csproj'.
+info : PackageReference for package 'Alba.AspNetCore2' version '1.4.3' added to file 'E:\proje
+cts\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj'.
+info : Committing restore...
+info : Writing lock file to disk. Path: E:\projects\mygithub\DotNetHello\HelloWorld.Tests\obj\
+project.assets.json
+log  : Restore completed in 21.15 sec for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\He
+lloWorld.Tests.csproj.
+PS E:\projects\mygithub\DotNetHello> dotnet build DotNetHello.sln
+Microsoft (R) Build Engine version 15.9.20+g88f5fadfbe for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restoring packages for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj...
+  Restore completed in 121.85 ms for E:\projects\mygithub\DotNetHello\HelloWorld\HelloWorld.csproj.
+  Restore completed in 593.82 ms for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj.
+  HelloWorld -> E:\projects\mygithub\DotNetHello\HelloWorld\bin\Debug\netcoreapp2.2\HelloWorld.dll
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning MSB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting" that could not be resolved.  These reference conflicts are listed in the build log when log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj]
+
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting.Abstractio
+ns" that could not be resolved.  These reference conflicts are listed in the build log when lo
+g verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.
+Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Http.Abstractions"
+ that could not be resolved.  These reference conflicts are listed in the build log when log v
+erbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tes
+ts.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Mvc.Core" that cou
+ld not be resolved.  These reference conflicts are listed in the build log when log verbosity
+is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj
+]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.Configuration.Abst
+ractions" that could not be resolved.  These reference conflicts are listed in the build log w
+hen log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\Hello
+World.Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.DependencyInjectio
+n.Abstractions" that could not be resolved.  These reference conflicts are listed in the build
+ log when log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests
+\HelloWorld.Tests.csproj]
+  HelloWorld.Tests -> E:\projects\mygithub\DotNetHello\HelloWorld.Tests\bin\Debug\netcoreapp2.
+2\HelloWorld.Tests.dll
+
+Build succeeded.
+
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting" that coul
+d not be resolved.  These reference conflicts are listed in the build log when log verbosity i
+s set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj]
+
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting.Abstractio
+ns" that could not be resolved.  These reference conflicts are listed in the build log when lo
+g verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.
+Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Http.Abstractions"
+ that could not be resolved.  These reference conflicts are listed in the build log when log v
+erbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tes
+ts.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Mvc.Core" that cou
+ld not be resolved.  These reference conflicts are listed in the build log when log verbosity
+is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj
+]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.Configuration.Abst
+ractions" that could not be resolved.  These reference conflicts are listed in the build log w
+hen log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\Hello
+World.Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.DependencyInjectio
+n.Abstractions" that could not be resolved.  These reference conflicts are listed in the build
+ log when log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests
+\HelloWorld.Tests.csproj]
+    6 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:28.78
+PS E:\projects\mygithub\DotNetHello> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   DotNetHello.sln
+        new file:   HelloWorld/Controllers/ValuesController.cs
+        new file:   HelloWorld/HelloWorld.csproj
+        new file:   HelloWorld/Program.cs
+        new file:   HelloWorld/Properties/launchSettings.json
+        new file:   HelloWorld/Startup.cs
+        new file:   HelloWorld/appsettings.Development.json
+        new file:   HelloWorld/appsettings.json
+        new file:   HelloWorld/obj/HelloWorld.csproj.nuget.cache
+        new file:   HelloWorld/obj/HelloWorld.csproj.nuget.g.props
+        new file:   HelloWorld/obj/HelloWorld.csproj.nuget.g.targets
+        new file:   HelloWorld/obj/project.assets.json
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   DotNetHello.sln
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        HelloWorld.Tests/
+PS E:\projects\mygithub\DotNetHello> git add .
+
+PS E:\projects\mygithub\DotNetHello> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   DotNetHello.sln
+        new file:   HelloWorld.Tests/HelloWorld.Tests.csproj
+        new file:   HelloWorld.Tests/UnitTest1.cs
+        new file:   HelloWorld/Controllers/ValuesController.cs
+        new file:   HelloWorld/HelloWorld.csproj
+        new file:   HelloWorld/Program.cs
+        new file:   HelloWorld/Properties/launchSettings.json
+        new file:   HelloWorld/Startup.cs
+        new file:   HelloWorld/appsettings.Development.json
+        new file:   HelloWorld/appsettings.json
+        new file:   HelloWorld/obj/HelloWorld.csproj.nuget.cache
+        new file:   HelloWorld/obj/HelloWorld.csproj.nuget.g.props
+        new file:   HelloWorld/obj/HelloWorld.csproj.nuget.g.targets
+        new file:   HelloWorld/obj/project.assets.json
+PS E:\projects\mygithub\DotNetHello> git commit -m "Initial commit"
+[master (root-commit) f291924] Initial commit
+ 15 files changed, 12801 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 DotNetHello.sln
+ create mode 100644 HelloWorld.Tests/HelloWorld.Tests.csproj
+ create mode 100644 HelloWorld.Tests/UnitTest1.cs
+ create mode 100644 HelloWorld/Controllers/ValuesController.cs
+ create mode 100644 HelloWorld/HelloWorld.csproj
+ create mode 100644 HelloWorld/Program.cs
+ create mode 100644 HelloWorld/Properties/launchSettings.json
+ create mode 100644 HelloWorld/Startup.cs
+ create mode 100644 HelloWorld/appsettings.Development.json
+ create mode 100644 HelloWorld/appsettings.json
+ create mode 100644 HelloWorld/obj/HelloWorld.csproj.nuget.cache
+ create mode 100644 HelloWorld/obj/HelloWorld.csproj.nuget.g.props
+ create mode 100644 HelloWorld/obj/HelloWorld.csproj.nuget.g.targets
+ create mode 100644 HelloWorld/obj/project.assets.json
+PS E:\projects\mygithub\DotNetHello> code
+
+PS E:\projects\mygithub\DotNetHello> dotnet test HelloWorld.Tests/HelloWorld.Tests.csproj
+Build started, please wait...
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting" that coul
+d not be resolved.  These reference conflicts are listed in the build log when log verbosity i
+s set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj]
+
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting.Abstractio
+ns" that could not be resolved.  These reference conflicts are listed in the build log when lo
+g verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.
+Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Http.Abstractions"
+ that could not be resolved.  These reference conflicts are listed in the build log when log v
+erbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tes
+ts.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Mvc.Core" that cou
+ld not be resolved.  These reference conflicts are listed in the build log when log verbosity
+is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj
+]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.Configuration.Abst
+ractions" that could not be resolved.  These reference conflicts are listed in the build log w
+hen log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\Hello
+World.Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.DependencyInjectio
+n.Abstractions" that could not be resolved.  These reference conflicts are listed in the build
+ log when log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests
+\HelloWorld.Tests.csproj]
+verify_the_endpoints.cs(9,27): error CS1983: The return type of an async method must be void,
+Task or Task<T> [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj]
+verify_the_endpoints.cs(9,22): error CS0246: The type or namespace name 'Task' could not be fo
+und (are you missing a using directive or an assembly reference?) [E:\projects\mygithub\DotNet
+Hello\HelloWorld.Tests\HelloWorld.Tests.csproj]
+PS E:\projects\mygithub\DotNetHello> dotnet test HelloWorld.Tests/HelloWorld.Tests.csproj
+Build started, please wait...
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting" that coul
+d not be resolved.  These reference conflicts are listed in the build log when log verbosity i
+s set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj]
+
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting.Abstractio
+ns" that could not be resolved.  These reference conflicts are listed in the build log when lo
+g verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.
+Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Http.Abstractions"
+ that could not be resolved.  These reference conflicts are listed in the build log when log v
+erbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tes
+ts.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Mvc.Core" that cou
+ld not be resolved.  These reference conflicts are listed in the build log when log verbosity
+is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj
+]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.Configuration.Abst
+ractions" that could not be resolved.  These reference conflicts are listed in the build log w
+hen log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\Hello
+World.Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.DependencyInjectio
+n.Abstractions" that could not be resolved.  These reference conflicts are listed in the build
+ log when log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests
+\HelloWorld.Tests.csproj]
+Build completed.
+
+Test run for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\bin\Debug\netcoreapp2.2\HelloWo
+rld.Tests.dll(.NETCoreApp,Version=v2.2)
+Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:04.99]     HelloWorld.Tests.verify_the_endpoint.check_it_out [FAIL]
+Failed   HelloWorld.Tests.verify_the_endpoint.check_it_out
+Error Message:
+ System.IO.FileNotFoundException : Could not load file or assembly 'Microsoft.AspNetCore.Http.
+Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system c
+annot find the file specified.
+Stack Trace:
+   at System.Signature.GetSignature(Void* pCorSig, Int32 cCorSig, RuntimeFieldHandleInternal f
+ieldHandle, IRuntimeMethodInfo methodHandle, RuntimeType declaringType)
+   at System.Reflection.RuntimeMethodInfo.get_ReturnType()
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.FindMethod(Type startupType, String
+methodName, String environmentName, Type returnType, Boolean required)
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.FindConfigureDelegate(Type startupTy
+pe, String environmentName)
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.LoadMethods(IServiceProvider hosting
+ServiceProvider, Type startupType, String environmentName)
+   at Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions.<>c__DisplayClass1_0.<UseStartup>b
+__1(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScop
+ed(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredSer
+vice(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredSer
+vice[T](IServiceProvider provider)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.EnsureStartup()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.EnsureApplicationServices()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.Start(IWebHostB
+uilder hostBuilder, String[] urls)
+   at Alba.SystemUnderTest.buildHost()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDef
+aultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Alba.SystemUnderTestBase.get_Services()
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at HelloWorld.Tests.verify_the_endpoint.check_it_out() in E:\projects\mygithub\DotNetHello\
+HelloWorld.Tests\verify_the_endpoints.cs:line 14
+--- End of stack trace from previous location where exception was thrown ---
+
+Total tests: 1. Passed: 0. Failed: 1. Skipped: 0.
+Test Run Failed.
+Test execution time: 6.2162 Seconds
+PS E:\projects\mygithub\DotNetHello> dotnet test HelloWorld.Tests/HelloWorld.Tests.csproj
+Build started, please wait...
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting" that coul
+d not be resolved.  These reference conflicts are listed in the build log when log verbosity i
+s set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj]
+
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting.Abstractio
+ns" that could not be resolved.  These reference conflicts are listed in the build log when lo
+g verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.
+Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Http.Abstractions"
+ that could not be resolved.  These reference conflicts are listed in the build log when log v
+erbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tes
+ts.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Mvc.Core" that cou
+ld not be resolved.  These reference conflicts are listed in the build log when log verbosity
+is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj
+]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.Configuration.Abst
+ractions" that could not be resolved.  These reference conflicts are listed in the build log w
+hen log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\Hello
+World.Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.DependencyInjectio
+n.Abstractions" that could not be resolved.  These reference conflicts are listed in the build
+ log when log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests
+\HelloWorld.Tests.csproj]
+Build completed.
+
+Test run for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\bin\Debug\netcoreapp2.2\HelloWo
+rld.Tests.dll(.NETCoreApp,Version=v2.2)
+Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:00.92]     HelloWorld.Tests.verify_the_endpoint.check_it_out [FAIL]
+Failed   HelloWorld.Tests.verify_the_endpoint.check_it_out
+Error Message:
+ System.IO.FileNotFoundException : Could not load file or assembly 'Microsoft.AspNetCore.Http.
+Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system c
+annot find the file specified.
+Stack Trace:
+   at System.Signature.GetSignature(Void* pCorSig, Int32 cCorSig, RuntimeFieldHandleInternal f
+ieldHandle, IRuntimeMethodInfo methodHandle, RuntimeType declaringType)
+   at System.Reflection.RuntimeMethodInfo.get_ReturnType()
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.FindMethod(Type startupType, String
+methodName, String environmentName, Type returnType, Boolean required)
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.FindConfigureDelegate(Type startupTy
+pe, String environmentName)
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.LoadMethods(IServiceProvider hosting
+ServiceProvider, Type startupType, String environmentName)
+   at Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions.<>c__DisplayClass1_0.<UseStartup>b
+__1(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScop
+ed(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredSer
+vice(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredSer
+vice[T](IServiceProvider provider)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.EnsureStartup()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.EnsureApplicationServices()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.Start(IWebHostB
+uilder hostBuilder, String[] urls)
+   at Alba.SystemUnderTest.buildHost()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDef
+aultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Alba.SystemUnderTestBase.get_Services()
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at HelloWorld.Tests.verify_the_endpoint.check_it_out() in E:\projects\mygithub\DotNetHello\
+HelloWorld.Tests\verify_the_endpoints.cs:line 14
+--- End of stack trace from previous location where exception was thrown ---
+
+Total tests: 1. Passed: 0. Failed: 1. Skipped: 0.
+Test Run Failed.
+Test execution time: 1.9253 Seconds
+PS E:\projects\mygithub\DotNetHello> dotnet test HelloWorld.Tests/HelloWorld.Tests.csproj
+Build started, please wait...
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting" that coul
+d not be resolved.  These reference conflicts are listed in the build log when log verbosity i
+s set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj]
+
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting.Abstractio
+ns" that could not be resolved.  These reference conflicts are listed in the build log when lo
+g verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.
+Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Http.Abstractions"
+ that could not be resolved.  These reference conflicts are listed in the build log when log v
+erbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tes
+ts.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Mvc.Core" that cou
+ld not be resolved.  These reference conflicts are listed in the build log when log verbosity
+is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj
+]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.Configuration.Abst
+ractions" that could not be resolved.  These reference conflicts are listed in the build log w
+hen log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\Hello
+World.Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.DependencyInjectio
+n.Abstractions" that could not be resolved.  These reference conflicts are listed in the build
+ log when log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests
+\HelloWorld.Tests.csproj]
+Build completed.
+
+Test run for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\bin\Debug\netcoreapp2.2\HelloWo
+rld.Tests.dll(.NETCoreApp,Version=v2.2)
+Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:00.85]     HelloWorld.Tests.verify_the_endpoint.check_it_out [FAIL]
+Failed   HelloWorld.Tests.verify_the_endpoint.check_it_out
+Error Message:
+ System.IO.FileNotFoundException : Could not load file or assembly 'Microsoft.AspNetCore.Http.
+Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system c
+annot find the file specified.
+Stack Trace:
+   at System.Signature.GetSignature(Void* pCorSig, Int32 cCorSig, RuntimeFieldHandleInternal f
+ieldHandle, IRuntimeMethodInfo methodHandle, RuntimeType declaringType)
+   at System.Reflection.RuntimeMethodInfo.get_ReturnType()
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.FindMethod(Type startupType, String
+methodName, String environmentName, Type returnType, Boolean required)
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.FindConfigureDelegate(Type startupTy
+pe, String environmentName)
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.LoadMethods(IServiceProvider hosting
+ServiceProvider, Type startupType, String environmentName)
+   at Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions.<>c__DisplayClass1_0.<UseStartup>b
+__1(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScop
+ed(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredSer
+vice(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredSer
+vice[T](IServiceProvider provider)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.EnsureStartup()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.EnsureApplicationServices()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.Start(IWebHostB
+uilder hostBuilder, String[] urls)
+   at Alba.SystemUnderTest.buildHost()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDef
+aultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Alba.SystemUnderTestBase.get_Services()
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at HelloWorld.Tests.verify_the_endpoint.check_it_out() in E:\projects\mygithub\DotNetHello\
+HelloWorld.Tests\verify_the_endpoints.cs:line 14
+--- End of stack trace from previous location where exception was thrown ---
+
+Total tests: 1. Passed: 0. Failed: 1. Skipped: 0.
+Test Run Failed.
+Test execution time: 1.7537 Seconds
+PS E:\projects\mygithub\DotNetHello> dotnet add package Microsoft.AspNetCore.Http --version 2.2.0 
+Could not find any project in `E:\projects\mygithub\DotNetHello\`.
+Usage: dotnet add <PROJECT> package [options] <PACKAGE_NAME>
+
+Arguments:
+  <PROJECT>        The project file to operate on. If a file is not specified, the command wil
+l search the current directory for one.
+  <PACKAGE_NAME>   The package reference to add.
+
+Options:
+  -h, --help                          Show command line help.
+  -v, --version <VERSION>             The version of the package to add.
+  -f, --framework <FRAMEWORK>         Add the reference only when targeting a specific framewo
+rk.
+  -n, --no-restore                    Add the reference without performing restore preview and
+ compatibility check.
+  -s, --source <SOURCE>               The NuGet package source to use during the restore.
+  --package-directory <PACKAGE_DIR>   The directory to restore packages to.
+  --interactive                       Allows the command to stop and wait for user input or ac
+tion (for example to complete authentication).
+PS E:\projects\mygithub\DotNetHello> dotnet add HelloWorld/HelloWorld.csproj package Microsoft.AspNetCore.Http --version 2.2.0 
+  Writing C:\Users\rajoo\AppData\Local\Temp\tmpB999.tmp
+info : Adding PackageReference for package 'Microsoft.AspNetCore.Http' into project 'HelloWorl
+d/HelloWorld.csproj'.
+log  : Restoring packages for E:\projects\mygithub\DotNetHello\HelloWorld\HelloWorld.csproj...
+
+info : Package 'Microsoft.AspNetCore.Http' is compatible with all the specified frameworks in
+project 'HelloWorld/HelloWorld.csproj'.
+info : PackageReference for package 'Microsoft.AspNetCore.Http' version '2.2.0' added to file
+'E:\projects\mygithub\DotNetHello\HelloWorld\HelloWorld.csproj'.
+info : Committing restore...
+info : Writing lock file to disk. Path: E:\projects\mygithub\DotNetHello\HelloWorld\obj\projec
+t.assets.json
+log  : Restore completed in 9.24 sec for E:\projects\mygithub\DotNetHello\HelloWorld\HelloWorl
+d.csproj.
+PS E:\projects\mygithub\DotNetHello> dotnet test HelloWorld.Tests/HelloWorld.Tests.csproj
+Build started, please wait...
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting" that coul
+d not be resolved.  These reference conflicts are listed in the build log when log verbosity i
+s set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj]
+
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Hosting.Abstractio
+ns" that could not be resolved.  These reference conflicts are listed in the build log when lo
+g verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.
+Tests.csproj]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.AspNetCore.Mvc.Core" that cou
+ld not be resolved.  These reference conflicts are listed in the build log when log verbosity
+is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj
+]
+C:\Program Files\dotnet\sdk\2.2.101\Microsoft.Common.CurrentVersion.targets(2110,5): warning M
+SB3277: Found conflicts between different versions of "Microsoft.Extensions.Configuration.Abst
+ractions" that could not be resolved.  These reference conflicts are listed in the build log w
+hen log verbosity is set to detailed. [E:\projects\mygithub\DotNetHello\HelloWorld.Tests\Hello
+World.Tests.csproj]
+Build completed.
+
+Test run for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\bin\Debug\netcoreapp2.2\HelloWo
+rld.Tests.dll(.NETCoreApp,Version=v2.2)
+Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:01.08]     HelloWorld.Tests.verify_the_endpoint.check_it_out [FAIL]
+Failed   HelloWorld.Tests.verify_the_endpoint.check_it_out
+Error Message:
+ System.IO.FileNotFoundException : Could not load file or assembly 'Microsoft.AspNetCore.Hosti
+ng.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The syste
+m cannot find the file specified.
+Stack Trace:
+   at System.Signature.GetSignature(Void* pCorSig, Int32 cCorSig, RuntimeFieldHandleInternal f
+ieldHandle, IRuntimeMethodInfo methodHandle, RuntimeType declaringType)
+   at System.Reflection.RuntimeMethodInfo.get_ReturnType()
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.FindMethod(Type startupType, String
+methodName, String environmentName, Type returnType, Boolean required)
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.FindConfigureDelegate(Type startupTy
+pe, String environmentName)
+   at Microsoft.AspNetCore.Hosting.Internal.StartupLoader.LoadMethods(IServiceProvider hosting
+ServiceProvider, Type startupType, String environmentName)
+   at Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions.<>c__DisplayClass1_0.<UseStartup>b
+__1(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScop
+ed(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredSer
+vice(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredSer
+vice[T](IServiceProvider provider)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.EnsureStartup()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.EnsureApplicationServices()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.Start(IWebHostB
+uilder hostBuilder, String[] urls)
+   at Alba.SystemUnderTest.buildHost()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDef
+aultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Alba.SystemUnderTestBase.get_Services()
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at HelloWorld.Tests.verify_the_endpoint.check_it_out() in E:\projects\mygithub\DotNetHello\
+HelloWorld.Tests\verify_the_endpoints.cs:line 14
+--- End of stack trace from previous location where exception was thrown ---
+
+Total tests: 1. Passed: 0. Failed: 1. Skipped: 0.
+Test Run Failed.
+Test execution time: 2.0703 Seconds
+PS E:\projects\mygithub\DotNetHello> dotnet add HelloWorld.Tests/HelloWorld.Tests.csproj package Microsoft.AspNetCore.All 
+  Writing C:\Users\rajoo\AppData\Local\Temp\tmpF4A5.tmp
+info : Adding PackageReference for package 'Microsoft.AspNetCore.All' into project 'HelloWorld
+.Tests/HelloWorld.Tests.csproj'.
+log  : Restoring packages for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tes
+ts.csproj...
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.all/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.all/index.json 1216ms
+info : Package 'Microsoft.AspNetCore.All' is compatible with all the specified frameworks in p
+roject 'HelloWorld.Tests/HelloWorld.Tests.csproj'.
+info : PackageReference for package 'Microsoft.AspNetCore.All' version '2.2.0' added to file '
+E:\projects\mygithub\DotNetHello\HelloWorld.Tests\HelloWorld.Tests.csproj'.
+info : Committing restore...
+log  : Generating MSBuild file E:\projects\mygithub\DotNetHello\HelloWorld.Tests\obj\HelloWorl
+d.Tests.csproj.nuget.g.props.
+log  : Generating MSBuild file E:\projects\mygithub\DotNetHello\HelloWorld.Tests\obj\HelloWorl
+d.Tests.csproj.nuget.g.targets.
+info : Writing lock file to disk. Path: E:\projects\mygithub\DotNetHello\HelloWorld.Tests\obj\
+project.assets.json
+log  : Restore completed in 8.46 sec for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\Hel
+loWorld.Tests.csproj.
+PS E:\projects\mygithub\DotNetHello> dotnet test HelloWorld.Tests/HelloWorld.Tests.csproj
+Build started, please wait...
+C:\Program Files\dotnet\sdk\2.2.101\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.DefaultIt
+ems.targets(153,5): warning NETSDK1071: A PackageReference to 'Microsoft.AspNetCore.All' speci
+fied a Version of `2.2.0`. Specifying the version of this package is not recommended. For more
+ information, see https://aka.ms/sdkimplicitrefs [E:\projects\mygithub\DotNetHello\HelloWorld.
+Tests\HelloWorld.Tests.csproj]
+Build completed.
+
+Test run for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\bin\Debug\netcoreapp2.2\HelloWo
+rld.Tests.dll(.NETCoreApp,Version=v2.2)
+Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:15.69]     HelloWorld.Tests.verify_the_endpoint.check_it_out [FAIL]
+Failed   HelloWorld.Tests.verify_the_endpoint.check_it_out
+Error Message:
+ Alba.ScenarioAssertionException : Expected status code 200, but was 404
+Expected the content to be 'Hey, world.'
+Expected a single header value of 'content-type'='text/plain; charset=utf-8', but no values we
+re found on the response
+
+Stack Trace:
+   at Alba.Scenario.RunAssertions()
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at HelloWorld.Tests.verify_the_endpoint.check_it_out() in E:\projects\mygithub\DotNetHello\
+HelloWorld.Tests\verify_the_endpoints.cs:line 14
+--- End of stack trace from previous location where exception was thrown ---
+
+Total tests: 1. Passed: 0. Failed: 1. Skipped: 0.
+Test Run Failed.
+Test execution time: 16.9321 Seconds
+PS E:\projects\mygithub\DotNetHello> dotnet test HelloWorld.Tests/HelloWorld.Tests.csproj
+Build started, please wait...
+C:\Program Files\dotnet\sdk\2.2.101\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.DefaultIt
+ems.targets(153,5): warning NETSDK1071: A PackageReference to 'Microsoft.AspNetCore.All' speci
+fied a Version of `2.2.0`. Specifying the version of this package is not recommended. For more
+ information, see https://aka.ms/sdkimplicitrefs [E:\projects\mygithub\DotNetHello\HelloWorld.
+Tests\HelloWorld.Tests.csproj]
+Build completed.
+
+Test run for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\bin\Debug\netcoreapp2.2\HelloWo
+rld.Tests.dll(.NETCoreApp,Version=v2.2)
+Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:01.30]     HelloWorld.Tests.verify_the_endpoint.check_it_out [FAIL]
+Failed   HelloWorld.Tests.verify_the_endpoint.check_it_out
+Error Message:
+ Alba.ScenarioAssertionException : Expected status code 200, but was 404
+Expected the content to be 'Hey, world.'
+Expected a single header value of 'content-type'='text/plain; charset=utf-8', but no values we
+re found on the response
+
+Stack Trace:
+   at Alba.Scenario.RunAssertions()
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at HelloWorld.Tests.verify_the_endpoint.check_it_out() in E:\projects\mygithub\DotNetHello\
+HelloWorld.Tests\verify_the_endpoints.cs:line 14
+--- End of stack trace from previous location where exception was thrown ---
+
+Total tests: 1. Passed: 0. Failed: 1. Skipped: 0.
+Test Run Failed.
+Test execution time: 2.0584 Seconds
+PS E:\projects\mygithub\DotNetHello> dotnet test HelloWorld.Tests/HelloWorld.Tests.csproj
+Build started, please wait...
+Build completed.
+
+Test run for E:\projects\mygithub\DotNetHello\HelloWorld.Tests\bin\Debug\netcoreapp2.2\HelloWo
+rld.Tests.dll(.NETCoreApp,Version=v2.2)
+Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:01.29]     HelloWorld.Tests.verify_the_endpoint.check_it_out [FAIL]
+Failed   HelloWorld.Tests.verify_the_endpoint.check_it_out
+Error Message:
+ Alba.ScenarioAssertionException : Expected status code 200, but was 404
+Expected the content to be 'Hey, world.'
+Expected a single header value of 'content-type'='text/plain; charset=utf-8', but no values we
+re found on the response
+
+Stack Trace:
+   at Alba.Scenario.RunAssertions()
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at HelloWorld.Tests.verify_the_endpoint.check_it_out() in E:\projects\mygithub\DotNetHello\
+HelloWorld.Tests\verify_the_endpoints.cs:line 14
+--- End of stack trace from previous location where exception was thrown ---
+
+Total tests: 1. Passed: 0. Failed: 1. Skipped: 0.
+Test Run Failed.
+Test execution time: 2.1135 Seconds
+PS E:\projects\mygithub\DotNetHello> git add .
+
+PS E:\projects\mygithub\DotNetHello> git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   HelloWorld.Tests/HelloWorld.Tests.csproj
+        deleted:    HelloWorld.Tests/UnitTest1.cs
+        new file:   HelloWorld.Tests/verify_the_endpoints.cs
+        new file:   HelloWorld/Controllers/HomeController.cs
+        modified:   HelloWorld/HelloWorld.csproj
+        modified:   HelloWorld/Startup.cs
+        modified:   HelloWorld/obj/HelloWorld.csproj.nuget.cache
+        modified:   HelloWorld/obj/project.assets.json
+PS E:\projects\mygithub\DotNetHello> cd ..
+PS E:\projects\mygithub> cd .\DotNetHelloWorld\
+PS E:\projects\mygithub\DotNetHelloWorld> ls
+
+
+    Directory: E:\projects\mygithub\DotNetHelloWorld
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       02/01/2019     19:32                HelloWorld
+d-----       02/01/2019     19:32                HelloWorld.Tests
+-a----       02/01/2019     19:29           5582 .gitignore
+-a----       02/01/2019     17:12           2871 DotNetHello.sln
+-a----       02/01/2019     19:29             73 README.md
+
+
+PS E:\projects\mygithub\DotNetHelloWorld> dotnet clean && dotnet restore DotNetHello.sln
+At line:1 char:14
++ dotnet clean && dotnet restore DotNetHello.sln
++              ~~
+The token '&&' is not a valid statement separator in this version.
+At line:1 char:14
++ dotnet clean && dotnet restore DotNetHello.sln
++              ~~
+The token '&&' is not a valid statement separator in this version.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidEndOfLine
+
+PS E:\projects\mygithub\DotNetHelloWorld> dotnet clean 
+Microsoft (R) Build Engine version 15.9.20+g88f5fadfbe for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 02/01/2019 19:37:42.
+     1>Project "E:\projects\mygithub\DotNetHelloWorld\DotNetHello.sln" on node 1 (Clean target
+(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Done Building Project "E:\projects\mygithub\DotNetHelloWorld\DotNetHello.sln" (Clean ta
+rget(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.19
+PS E:\projects\mygithub\DotNetHelloWorld> dotnet restore DotNetHello.sln
+  Restoring packages for E:\projects\mygithub\DotNetHelloWorld\HelloWorld.Tests\HelloWorld.Tes
+ts.csproj...
+  Restoring packages for E:\projects\mygithub\DotNetHelloWorld\HelloWorld\HelloWorld.csproj...
+
+  Generating MSBuild file E:\projects\mygithub\DotNetHelloWorld\HelloWorld\obj\HelloWorld.cspr
+oj.nuget.g.props.
+  Generating MSBuild file E:\projects\mygithub\DotNetHelloWorld\HelloWorld.Tests\obj\HelloWorl
+d.Tests.csproj.nuget.g.props.
+  Restore completed in 4.78 sec for E:\projects\mygithub\DotNetHelloWorld\HelloWorld\HelloWorl
+d.csproj.
+  Restore completed in 4.75 sec for E:\projects\mygithub\DotNetHelloWorld\HelloWorld.Tests\Hel
+loWorld.Tests.csproj.
+PS E:\projects\mygithub\DotNetHelloWorld> dotnet test HelloWorld.Tests/HelloWorld.Tests.csproj
+Build started, please wait...
+Build completed.
+
+Test run for E:\projects\mygithub\DotNetHelloWorld\HelloWorld.Tests\bin\Debug\netcoreapp2.2\He
+lloWorld.Tests.dll(.NETCoreApp,Version=v2.2)
+Microsoft (R) Test Execution Command Line Tool Version 15.9.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:08.30]     HelloWorld.Tests.verify_the_endpoint.check_it_out [FAIL]
+Failed   HelloWorld.Tests.verify_the_endpoint.check_it_out
+Error Message:
+ Alba.ScenarioAssertionException : Expected status code 200, but was 404
+Expected the content to be 'Hey, world.'
+Expected a single header value of 'content-type'='text/plain; charset=utf-8', but no values we
+re found on the response
+
+Stack Trace:
+   at Alba.Scenario.RunAssertions()
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at Alba.SystemUnderTestExtensions.Scenario(ISystemUnderTest system, Action`1 configure)
+   at HelloWorld.Tests.verify_the_endpoint.check_it_out() in E:\projects\mygithub\DotNetHelloW
+orld\HelloWorld.Tests\verify_the_endpoints.cs:line 14
+--- End of stack trace from previous location where exception was thrown ---
+
+Total tests: 1. Passed: 0. Failed: 1. Skipped: 0.
+Test Run Failed.
+Test execution time: 9.3910 Seconds
+PS E:\projects\mygithub\DotNetHelloWorld> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20190102194512
+**********************
